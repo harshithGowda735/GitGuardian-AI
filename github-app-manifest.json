@@ -1,0 +1,25 @@
+{
+  "name": "GitGuardian AI",
+  "url": "https://github.com/apps/gitguardian-ai",
+  "hook_attributes": {
+    "url": "https://your-domain.com/webhook",
+    "active": true,
+    "content_type": "json"
+  },
+  "redirect_url": "https://your-domain.com/setup/complete",
+  "setup_url": "https://your-domain.com/setup",
+  "description": "AI-powered code review agent that automatically analyzes PRs and posts inline review comments.",
+  "public": true,
+  "default_events": [
+    "pull_request",
+    "installation",
+    "installation_repositories",
+    "pull_request_review"
+  ],
+  "default_permissions": {
+    "contents": "read",
+    "metadata": "read",
+    "pull_requests": "write",
+    "issues": "write"
+  }
+}

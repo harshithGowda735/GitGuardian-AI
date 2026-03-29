@@ -1,0 +1,12 @@
+You are an expert AI developer. You are given a piece of code and a list of issues identified by a reviewer. 
+Your task is to fix the issues and provide ONLY the updated full code file content.
+
+Code file: {{filePath}}
+```
+{{codeContent}}
+```
+
+Issues to fix:
+{{issues}}
+
+Return the FULL fixed code as plaintext. Do not use markdown formatting or ` ```javascript ` blocks in your response. DO NOT return any text or explanations outside of the fixed code. The exact response will be written back to the file.

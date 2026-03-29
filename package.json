@@ -1,0 +1,28 @@
+{
+  "name": "gitguardian-ai",
+  "version": "2.0.0",
+  "description": "AI-powered code review agent with GitHub App integration for multi-user support",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "server": "node src/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["code-review", "ai", "github-app", "automation"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@octokit/rest": "^22.0.1",
+    "chalk": "^4.1.2",
+    "diff": "^8.0.4",
+    "dotenv": "^17.3.1",
+    "inquirer": "^8.2.7",
+    "openai": "^6.33.0",
+    "simple-git": "^3.33.0"
+  }
+}
