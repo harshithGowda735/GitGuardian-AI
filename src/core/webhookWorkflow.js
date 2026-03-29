@@ -44,7 +44,7 @@ const runWebhookWorkflow = async (octokit, owner, repo, prNumber, changedFiles) 
     if (!content) continue;
 
     if (config.modules?.reviewer?.enabled !== false) {
-      const reviewResult = await reviewCode(file.filename, content);
+      const reviewResult = await reviewCode(file.filename, content, file.patch);
       if (!reviewResult) continue;
 
       let score = 100;
