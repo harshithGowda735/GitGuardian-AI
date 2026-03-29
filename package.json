@@ -4,8 +4,9 @@
   "description": "AI-powered code review agent with GitHub App integration for multi-user support",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/server/server.js",
     "server": "node src/server/server.js",
+    "cli": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["code-review", "ai", "github-app", "automation"],
