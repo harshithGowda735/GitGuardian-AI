@@ -100,6 +100,12 @@ async function handlePR(payload, prKey) {
 }
 
 const server = http.createServer((req, res) => {
+  if (req.method === 'GET' && (req.url === '/' || req.url === '')) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(`<!DOCTYPE html><html><head><title>GitGuardian AI</title></head><body style="font-family:sans-serif;text-align:center;padding:50px"><h1>GitGuardian AI Agent</h1><p>AI-powered code review with GitHub App integration.</p><p><a href="/health">Health Check</a> | Webhook: <code>/api/webhook</code></p></body></html>`);
+    return;
+  }
+
   if (req.method === 'GET' && req.url === '/health') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
